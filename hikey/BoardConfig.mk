@@ -6,6 +6,7 @@ BOARD_KERNEL_CMDLINE := console=ttyAMA3,115200 androidboot.console=ttyAMA3 andro
 else
 BOARD_KERNEL_CMDLINE := console=ttyFIQ0 androidboot.console=ttyFIQ0 androidboot.hardware=hikey firmware_class.path=/system/etc/firmware efi=noruntime
 endif
+BOARD_KERNEL_CMDLINE += video=HDMI-A-1:1280x720@60
 
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1610612736
 ifeq ($(TARGET_USERDATAIMAGE_4GB), true)

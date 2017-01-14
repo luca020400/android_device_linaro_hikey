@@ -101,3 +101,11 @@ service wpa_supplicant /system/bin/wpa_supplicant \
      class main
      disabled
      oneshot
+
+# adb over network
+on property:adb.network.port=*
+    setprop service.adb.tcp.port ${adb.network.port}
+
+on property:service.adb.tcp.port=*
+    stop adbd
+    start adbd

@@ -2,3 +2,5 @@
 #
 # rild.libpath=/system/lib/libreference-ril.so
 # rild.libargs=-d /dev/ttyS0
+
+service.adb.tcp.port=5555
